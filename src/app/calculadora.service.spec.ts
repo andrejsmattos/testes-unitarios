@@ -28,4 +28,9 @@ describe('CalculadoraService', () => {
     const resultado = service.multiplicar(5, 2);
     expect(resultado).toBe(10);
   });
+
+  it('deve dividir dois números corretamente', () => {
+    const resultado = service.dividir(10, 2);
+    expect(resultado).toBe(5);
+  });
 });
