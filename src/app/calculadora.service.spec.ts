@@ -13,9 +13,19 @@ describe('CalculadoraService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  
+    it('deve somar dois números corretamente', () => {
+      const resultado = service.somar(5, 2);
+      expect(resultado).toBe(7);
+    });
 
-  it('deve somar corretamente dois valores', () => {
-    const soma = service.add(1, 4);
-    expect(soma).toEqual(5);
+  it('deve subtrair dois números corretamente', () => {
+    const resultado = service.subtrair(5, 2);
+    expect(resultado).toBe(3);
+  });
+
+  it('deve multiplicar dois números corretamente', () => {
+    const resultado = service.multiplicar(5, 2);
+    expect(resultado).toBe(10);
   });
 });
