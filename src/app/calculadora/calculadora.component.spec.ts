@@ -20,4 +20,9 @@ describe('CalculadoraComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('deve retornar o objeto resultado para a tela de usuário', () => {
+  //   component.calculate();
+  //   expect(component.result).toBe();
+  // });
 });

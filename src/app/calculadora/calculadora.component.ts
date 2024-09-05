@@ -12,11 +12,31 @@ import { FormsModule } from '@angular/forms';
 export class CalculadoraComponent {
   num1: number = 0;
   num2: number = 0;
-  result: number = 0;
+  resultado: number = 0;
 
   constructor(private calculatorService: CalculadoraService) {}
 
-  calculate() {
-    this.result = this.calculatorService.add(this.num1, this.num2);
+  somar() {
+    this.resultado = this.calculatorService.somar(this.num1, this.num2);
+    this.num1 = 0;
+    this.num2 = 0;
+   }
+
+  subtrair() {
+    this.resultado = this.calculatorService.subtrair(this.num1, this.num2);
+    this.num1 = 0;
+    this.num2 = 0;
+  } 
+
+  multiplicar() {
+    this.resultado = this.calculatorService.multiplicar(this.num1, this.num2);
+    this.num1 = 0;
+    this.num2 = 0;
+  }
+
+  dividir() {
+    this.resultado = this.calculatorService.dividir(this.num1, this.num2);
+    this.num1 = 0;
+    this.num2 = 0;
   }
 }
