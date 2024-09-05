@@ -33,4 +33,9 @@ describe('CalculadoraService', () => {
     const resultado = service.dividir(10, 2);
     expect(resultado).toBe(5);
   });
+
+  it('deve lançar uma exceção ao tentar dividir por zero', () => {
+    expect(() => service.dividir(10, 0))
+      .toThrow();
+  });
 });
