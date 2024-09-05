@@ -23,10 +23,11 @@ describe('CalculadoraComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('deve subtrair dois números corretamente', () => {
+  it('deve verificar se "somar()" está somando corretamente', () => {
     component.num1 = 5;
     component.num2 = 2;
-    component.subtrair();
-    expect(component.resultado).toBe(3);
+    component.somar();
+    expect(component.resultado).toBe(7);
   });
+
 });
