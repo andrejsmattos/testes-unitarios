@@ -8,7 +8,9 @@ describe('CalculadoraComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CalculadoraComponent]
+      imports: [
+        CalculadoraComponent,
+      ]
     })
     .compileComponents();
 
@@ -21,8 +23,10 @@ describe('CalculadoraComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('deve retornar o objeto resultado para a tela de usuário', () => {
-  //   component.calculate();
-  //   expect(component.result).toBe();
-  // });
+  it('deve subtrair dois números corretamente', () => {
+    component.num1 = 5;
+    component.num2 = 2;
+    component.subtrair();
+    expect(component.resultado).toBe(3);
+  });
 });
